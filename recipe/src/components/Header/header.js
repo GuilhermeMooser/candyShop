@@ -24,7 +24,7 @@ function Header() {
                                     <Link to="/" className="nav-link">Nossos Doces</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/adicao" className="nav-link">Adicionar Receita</Link>
+                                    <Link to="/adicao" className="nav-link">Adicionar Receitas</Link>
                                 </li>
 
                                 <li className="nav-item divider"></li>

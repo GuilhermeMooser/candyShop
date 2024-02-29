@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "Donuts",
+      "description": "Desfrute de uma indulgência doce com nossos donuts artesanais. Crocantes por fora, macios por dentro e cobertos com uma variedade de coberturas irresistíveis, cada mordida é uma explosão de sabor. Perfeito para qualquer momento do dia, nossos donuts são a escolha ideal para satisfazer seus desejos açucarados. Experimente hoje mesmo e descubra a perfeição em forma de donut!",
+      "image": "https://www.receitasnestle.com.br/sites/default/files/srh_recipes/4c16f98edb2d1c4792f2b7855cecc3c1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Pretzel",
+      "description": "Experimente a crocância irresistível e o sabor reconfortante dos nossos pretzels artesanais. Feitos com uma massa macia e levemente salgada, esses petiscos clássicos são uma combinação perfeita de indulgência e simplicidade.",
+      "image": "https://www.receitasnestle.com.br/sites/default/files/srh_recipes/966088d6e1b0bb64e28f542afb8e8aa4.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Cookies",
+      "description": "Deixe-se levar por uma experiência de sabor única com nossos cookies artesanais. Crocantes por fora, macios por dentro e repletos de pedacinhos de felicidade, cada mordida é uma explosão de indulgência que vai fazer seus sentidos dançarem de alegria.",
+      "image": "https://www.receitasnestle.com.br/sites/default/files/srh_recipes/973027d97439af31c9f69c2cbeaaf81f.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Sorvetes",
+      "description": "Nossos sorvetes são a escolha perfeita para qualquer ocasião, seja para refrescar em um dia quente de verão, celebrar uma ocasião especial ou simplesmente satisfazer um desejo por algo doce e gelado. Com textura sedosa e sabores autênticos, cada colherada é uma celebração de frescor e prazer.",
+      "image": "https://images.aws.nestle.recipes/original/cb7a9cb0c56807d8b0ca602968d7e985_sorvete-coco-cremoso-caseiro-receitas-nestle.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Mousses",
+      "description": "Deleite-se com a indulgência luxuosa das nossas mousses artesanais. Cada colherada é uma experiência sensorial delicada, com textura suave e sabores envolventes que derretem na boca como uma nuvem de felicidade.",
+      "image": "https://www.receitasnestle.com.br/sites/default/files/srh_recipes/369562012750bd46ceaeef5d59a23229.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Tortas",
+      "description": "Desfrute de uma experiência culinária única com nossas tortas artesanais. Cada fatia é uma jornada sensorial, combinando camadas de sabores ricamente harmonizados e texturas irresistíveis que deixam um sorriso em cada mordida.",
+      "image": "https://d1uz88p17r663j.cloudfront.net/original/67b6397ee2dde130c5eed837ffafb61f_torta-holandesa-receitas-nestle.jpg"
+    }
+]

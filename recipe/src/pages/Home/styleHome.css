@@ -20,17 +20,29 @@ button.btn.btnSectionTopo:hover {
 
 /* Section Content
 -----------------------------*/
-.imgNews {
-    border-radius: 10px;
-    border: 4px solid var(--tertiary-color);
-}
-
 
 .divisor {
     width: auto;
     height: 5px;
     background: linear-gradient(to left, black, rgb(219, 143, 143), black);
 }
+
+#listaDoces h1 {
+    border: 2px solid var(--secundary-color);
+    display: inline;
+    padding: 5px 11px;
+    border-radius: 10px;
+    background: var(--tertiary-color);
+    color: var(--secundary-color);
+    transition: 0.5s;
+}
+
+#listaDoces h1:hover {
+    padding: 9px 13px;
+    transition: 0.5s;
+    border: 2px solid var(--tertiary-color);
+}
+
 
 /*Zerar o estilo do botao*/
 button {
