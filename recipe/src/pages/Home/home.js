@@ -9,13 +9,37 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styleHome.css';
 import '../../assets/stylesFull.css';
 
+
+// Componente de Modal
+const Modal = ({ isOpen, onClose, selectedItem }) => {
+    if (!isOpen || !selectedItem) return null;
+    return (
+      <div className="modal">
+        <div className="modal-content">
+          <span className="close" onClick={onClose}>&times;</span>
+          <h2>{selectedItem.name}</h2>
+          <img src={selectedItem.image} alt={selectedItem.name} />
+          <p>{selectedItem.description}</p>
+        </div>
+      </div>
+    );
+};
+
+
 const Home = () =>  {
-        const [data, setData] = useState([]);
-      
-        useEffect(() => {
-            var listaDoces = jsonData;
-            setData(listaDoces);
-          }, []);
+    const [modalOpen, setModalOpen] = useState(false);
+    const [selectedItem, setSelectedItem] = useState(null);
+    const [data, setData] = useState([]);
+
+    const handleItemClick = (item) => {
+        setSelectedItem(item);
+        setModalOpen(true);
+      };
+    
+    useEffect(() => {
+        var listaDoces = jsonData;
+        setData(listaDoces);
+        }, []);
 
     return(
        <>
@@ -46,12 +70,13 @@ const Home = () =>  {
 
                 <div className="d-flex mt-3 flex-wrap">
                     {data.map(item => (
-                        <div key={item.id} className='col-4'>
+                        <div key={item.id} onClick={() => handleItemClick(item)} className='col-4' style={{ cursor: 'pointer' }}>
                                 <h3><strong>{item.name}</strong></h3>
                                 <img src={item.image} alt={item.name} style={{ maxWidth: '350px', maxHeight: '350px' }} />
                         </div>
                     ))} 
                 </div>
+                <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} selectedItem={selectedItem} />
             </div>
         </section>
         <hr className="divisor mt-5"></hr>
