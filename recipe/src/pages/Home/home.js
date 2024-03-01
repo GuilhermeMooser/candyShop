@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
 import jsonData from '../../fakeApi.json'
+import Adicao from '../Adicao/adicao';
 
 /* Styles and Bootstrap */
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,7 +14,7 @@ import '../../assets/stylesFull.css';
 const Modal = ({ isOpen, onClose, selectedItem }) => {
     if (!isOpen || !selectedItem) return null;
     return (
-      <div className="modal">
+      <div className="modal-overlay">
         <div className="modal-content">
           <span className="close" onClick={onClose}>&times;</span>
           <h2>{selectedItem.name}</h2>
@@ -36,8 +36,12 @@ const Home = () =>  {
         setModalOpen(true);
       };
     
+    const addItemToList = (newItem) => {
+        setData([...data, newItem]);
+    };
+
     useEffect(() => {
-        var listaDoces = jsonData;
+        var listaDoces = [...jsonData];
         setData(listaDoces);
         }, []);
 
@@ -48,12 +52,12 @@ const Home = () =>  {
         <section className="fullAlignFlex espacoTopo">
             <div className="container align-self-center">
                 <div className="row">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                         <button className="btn btnSectionTopo">
                             <Link to="/">NOSSOS DOCES</Link>
                         </button>
                     </div>
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                         <button className="btn btnSectionTopo">
                             <Link to="/adicao">ADICIONE AINDA MAIS DOCES</Link>
                         </button>
@@ -68,14 +72,16 @@ const Home = () =>  {
             <div className="container align-self-center">
                 <h1>Conheça nossos incríveis Doces</h1>
 
-                <div className="d-flex mt-3 flex-wrap">
+                <div className="d-flex mt-3 flex-wrap justify-content-center">
                     {data.map(item => (
-                        <div key={item.id} onClick={() => handleItemClick(item)} className='col-4' style={{ cursor: 'pointer' }}>
+                        <div key={item.id} onClick={() => handleItemClick(item)} className='col-md-12 col-lg-6 col-xl-4' style={{ cursor: 'pointer' }}>
                                 <h3><strong>{item.name}</strong></h3>
                                 <img src={item.image} alt={item.name} style={{ maxWidth: '350px', maxHeight: '350px' }} />
                         </div>
                     ))} 
                 </div>
+                <hr className="divisor mt-5"></hr>
+                <Adicao addItemToList={addItemToList} />
                 <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} selectedItem={selectedItem} />
             </div>
         </section>
